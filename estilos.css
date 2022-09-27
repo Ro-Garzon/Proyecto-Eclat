@@ -260,6 +260,21 @@ nav a:hover{
     .tarjeta>img{
         width: 100%;
     }
+    .contenedor{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .boton {
+        color: aliceblue;
+        background-color: #af54d6;
+        border-radius: 1px;
+        margin: 10px;
+        text-decoration: none;
+    }
 
 
 
