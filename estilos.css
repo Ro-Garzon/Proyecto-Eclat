@@ -496,4 +496,28 @@ input[type=submit] {
     color:#dbd8d8
 }
 
+/*body form {
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/
+
+form .title{
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin: 20px;
+}
+
+form button{
+    color: #000;
+    background-color: #fff;
+    padding: 1px;
+    margin: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
     
