@@ -15,7 +15,7 @@ body{
 .grid-container{
     display: grid;
     background-color: #fcf8f8;
-    column-gap: 20px;
+    column-gap: 30px;
     grid-template-areas: 
     "h h h h h h"
     "n n n n n n"
@@ -24,83 +24,55 @@ body{
     "s2 s2 s2 s2 s2 a"
     "f f f f f f";
 }
+/*Encabezado*/
 
-.header{
+header{
     grid-area: h;
     text-align: center;
-    /*background-color: #efd9f8;*/
     background-color:#eee1e1; 
     padding: 20px;
     width: 100%;
 }
 
-.nav{
+h1{
+    font-family: 'estonia', cursive;
+    text-align: center;
+    font-size: 3em;
+    color: #000;
+}
+        
+h1,#logo{
+    display: inline-block;
+    margin: 5px;
+}
+
+header img{
+    height: 30px
+}
+
+
+/*menú de navegación*/
+nav{
     grid-area: n;
-    /*background-color: #763d8f;*/
     background-color: #753460;
     box-shadow: 0px 3px 5px #adabad;
     height: 50px;
     width: 100%;
 }
 
-.main{
-    grid-area: m;
-    margin: 20px 0px;
-    box-shadow: 0px 3px 5px #dad6d6;
-    max-width: 100%;
-}
-
-.section1{
-    grid-area: s1;
-    width: 100%;  
-}
-
-
-.section2{
-    grid-area: s2;
-    width: 100%;
-}
-
-.section1, .section2{
-    background-color: #fff;
-    margin-bottom: 20px;
-    box-shadow: 0px 3px 5px #dad6d6;
-    padding: 20px 10px;
-}
-
-.aside{
-    grid-area: a;
-    background-color:#fff;
-    border: 5px solid #8acebfce;
-    box-shadow: 0px 3px 5px #dad6d6;
-    width:100%;
-    margin-bottom: 20px;
-}
-
-.footer{
-    grid-area: f;
-    text-align: center;
-    color:#dbd8d8;/*#d1cccc;*/
-    /*background-color: #763d8f;*/
-    background-color: #753460;
-    font-size: 14px;
-    width: 100%;
-    padding: 20px;
-}
-
-
 nav ul{
-    float: left;
+    display: flex;
+    justify-content: space-around;
 }
 
 nav ul li{
-    display:inline-block;
     line-height: 50px;
+    position: relative;
 }
 
 nav ul li a{
     color: #dbd8d8;
-    padding: 5px 0;
+    padding: 5px 2px;
     font-size: 18px;
 }
 
@@ -111,6 +83,22 @@ li a:hover{
     transition: .5s;
     
 }
+
+.submenu{
+    display: none;
+}
+
+.submenu a{
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.menu li:hover .submenu{
+    display: block;
+    background-color: #753460;
+    width: 120%;  
+}
+
 
 .menuboton{
     padding-right: 20px;
@@ -123,6 +111,137 @@ li a:hover{
 
 #check{
     display: none;
+}
+
+
+/*main*/
+main {
+    grid-area: m;
+    max-width: 100%;
+}
+
+/*carrusel*/
+.slider{
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 3px 5px #dad6d6;
+    margin: 40px 0px;
+}
+
+.slider ul{
+    display: flex;
+    animation: change 10s infinite alternate linear;
+    translate: linear;
+    width: 500%;
+}
+
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+
+.slider img{
+    max-width: 100%;
+    height: 100%;
+}
+
+
+@keyframes change{
+    0%{margin-left: 0%;}
+    15%{margin-left: 0%;}
+    
+    20%{margin-left: -100%;}
+    35%{margin-left: -100%;}
+    
+    40%{margin-left: -200%;}
+    55%{margin-left: -200%;}
+    
+    60%{margin-left: -300%;}
+    75%{margin-left: -300%;}
+
+    80%{margin-left: -400%;}
+    100%{margin-left: -400%;}
+}
+
+/*Promociones del home*/
+.section1{
+    grid-area: s1;
+    width: 100%;  
+}
+
+.section2{
+    grid-area: s2;
+    width: 100%;
+}
+
+.section1, .section2{
+    background-color: #fff;
+    margin-bottom: 40px;
+    box-shadow: 0px 3px 5px #dad6d6;
+    padding: 20px 10px;
+}
+.promo{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.promoFoto{
+    width:60%; 
+    max-width: 600px;
+    min-width: 300px;
+    height: 60%; 
+    padding-bottom: 20px;
+}
+
+.promoDetalle{
+    width:30%;
+    min-width: 150px;
+    text-align: center;
+    padding-bottom: 20px;
+    line-height: 2em;
+}
+
+/*Publicidad de cuotas*/
+aside{
+    grid-area: a;
+    background-color:#fff;
+    border: 5px solid #8acebfce;
+    box-shadow: 0px 3px 5px #dad6d6;
+    width:100%;
+    margin-bottom: 40px;
+}
+
+.publicidad{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+/*Footer con redes sociales y atribución de íconos*/
+footer{
+    grid-area: f;
+    text-align: center;
+    color:#dbd8d8;
+    background-color: #753460;
+    font-size: 14px;
+    width: 100%;
+    padding: 20px;
+}
+
+.social img{
+    width: 25px;
+    margin: 10px 20px 20px;
+}
+
+#atribucion a{
+    color:#dbd8d8
 }
 
 
@@ -155,35 +274,37 @@ li a:hover{
         top: 150px;
         right: -100%;
         text-align: left;
-        transition: all .5s;
-    
-    }
-
-    nav ul li{
-        font-size: 20px;
+        transition: all .4s;
         display: block;
     }
+
 
     nav ul li a{
         font-size: 18px;
         margin-left: 30px;
     }
 
+    .submenu{
+        position: inherit;
+        z-index: 10px;
+        top:0;
+        left: 70px;
+        padding:0px;
+        height: inherit;
+        width: 30%;
+        }
     
-   #check:checked ~ ul{
+    #check:checked ~ ul{
     right: 0;
-   }
+    }
 
-   #check:checked ~ .menuboton #close{
+    #check:checked ~ .menuboton #close{
     display: inline-block;
-   }   
-   #check:checked ~ .menuboton #menu{
+    }  
+
+    #check:checked ~ .menuboton #menu{
     display: none;
-   }   
-
-
-
-
+    }   
 
     .publicidad{
         justify-content:space-around;
@@ -195,7 +316,6 @@ li a:hover{
         min-width: 100px;
         max-width: 120px;
     }
-
 }
 
 /* For tablets: */
@@ -211,22 +331,15 @@ li a:hover{
         "f"
     }
 
-    nav ul li a{
-        font-size: 15px;
-        margin: 15px;
-    }
-
     .publicidad{
         justify-content:space-around;
         gap:5px;
-    
     }
     
     .publicidad img{
         width: 30%;
         max-width: 120px;
-    } 
-    
+    }   
 }
 
 /* For desktop: */
@@ -241,26 +354,21 @@ li a:hover{
         "f f f f f f";
     }
 
-    nav ul li a{
-        font-size: 18px;
-        margin: 25px;
-    }
-
     .publicidad{
         justify-content: center;
         align-content: space-around; 
     }
+
     .publicidad img{
         width: 100%;
         min-width: 80px;
-        max-width: 120px;
-        
+        max-width: 120px;   
     }
-    
 }
 
 
 /* For desktop: */
+
 @media only screen and (min-width: 1200px) {
     .grid-container{
         grid-template-areas: 
@@ -271,6 +379,7 @@ li a:hover{
         "s2 s2 s2 s2 s2 a"
         "f f f f f f";
     } 
+
     .publicidad{
         justify-content: center;
         align-content: space-around; 
@@ -283,81 +392,10 @@ li a:hover{
         border: 2px solid #8acebfce;
         border-style: hidden hidden solid hidden;   
     }
-    
 }
 
 
-
-
-h1{
-    font-family: 'estonia', cursive;
-    text-align: center;
-    font-size: 3em;
-    color: #000;
-}
-        
-h1,#logo{
-    display: inline-block;
-    margin: 5px;
-}
-
-.header img{
-    height: 30px
-}
-
-
-
-      
-.slider{
-    width: 100%;
-    overflow: hidden;
-}
-
-.slider ul{
-    display: flex;
-    animation: change 10s infinite alternate linear;
-    translate: linear;
-    width: 500%;
-}
-
-.slider li{
-    width: 100%;
-    list-style: none;
-}
-
-.slider img{
-    max-width: 100%;
-    height: 100%;
-    
-}
-
-
-@keyframes change{
-    0%{margin-left: 0%;}
-    15%{margin-left: 0%;}
-    
-    20%{margin-left: -100%;}
-    35%{margin-left: -100%;}
-    
-    40%{margin-left: -200%;}
-    55%{margin-left: -200%;}
-    
-    60%{margin-left: -300%;}
-    75%{margin-left: -300%;}
-
-    80%{margin-left: -400%;}
-    100%{margin-left: -400%;}
-}
-
-.publicidad{
-    width: 100%;
-    height: 100%;
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap; 
-}
-
-
+/*Registro*/
 .registro {
     margin: 20px;
 }
@@ -402,7 +440,7 @@ input[type=email], select {
     box-sizing: border-box;
 }
       
-input[type=submit] {
+.botonRegistro {
     width: 20%;
     background-color: #eb65d9;
     color: white;
@@ -413,13 +451,14 @@ input[type=submit] {
     cursor: pointer;
 }
   
+/*Tarjetas de productos*/
 .contenedor{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content:space-evenly;
     gap: 20px;
-    row-gap: 20px;
+    row-gap: 40px;
     margin: 20px 10px;
 }
 
@@ -435,8 +474,7 @@ input[type=submit] {
     width: 100%;
     border-radius: 8px 8px 0 0;
     height:200px;
-    object-fit: cover; 
-    
+    object-fit: cover;    
 }
     
 .tarjeta p, .tarjeta h2 {
@@ -450,7 +488,6 @@ input[type=submit] {
   
 .boton {
     color: aliceblue;
-    /*background-color: #af54d6;*/
     background-color: #eb65d9;
     border-radius: 3px;
     padding: 5px;
@@ -459,65 +496,36 @@ input[type=submit] {
 }
 
     
-.promo{
-    display:flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 40px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
+
+/*Inicio de sesión*/
 
 
-.promoFoto{
-    width:60%; 
-    max-width: 600px;
-    min-width: 300px;
-    height: 60%; 
-    padding-bottom: 20px;
-}
-
-.promoDetalle{
-    width:30%;
-    min-width: 150px;
-    text-align: center;
-    padding-bottom: 20px;
-    line-height: 2em;
-}
-
-
-.social img{
-    width: 25px;
-    margin: 10px 20px 20px;
-}
-
-#atribucion a{
-    color:#dbd8d8
-}
-
-/*body form {
-    min-height: 100vh;
-    flex-direction: column;
+.sesion{
     display: flex;
+    flex-direction: column;
+    row-gap: 30px;
     align-items: center;
     justify-content: center;
-}*/
+}
+
+.diseñoDatos input{
+    width: 90%;
+}
 
 form .title{
     font-size: 20px;
     font-weight: 800;
-    margin-bottom: 30px;
-    margin: 20px;
+    margin-top: 60px;
 }
 
-form button{
-    color: #000;
-    background-color: #fff;
-    padding: 1px;
-    margin: 10px;
-    text-decoration: none;
+.botonSesion{
+    width: 20%;
+    background-color: #eb65d9;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
 }
-
-    
+   
