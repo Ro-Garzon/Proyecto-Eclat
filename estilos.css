@@ -459,11 +459,12 @@ input[type=email], select {
     justify-content:space-evenly;
     gap: 20px;
     row-gap: 40px;
-    margin: 20px 10px;
+    margin: 40px 0px
 }
 
 .tarjeta{
     width: 300px;
+    background-color: #fff;
     border:1px solid gray;
     border-radius: 10px;
     padding-bottom: 20px;
@@ -477,8 +478,13 @@ input[type=email], select {
     object-fit: cover;    
 }
     
-.tarjeta p, .tarjeta h2 {
+.tarjeta h2, .tarjeta p{
     padding: 10px;
+}
+
+.detalle{
+    padding: 10px;
+    height: 90px;
 }
     
 .tarjeta>img{
@@ -491,8 +497,8 @@ input[type=email], select {
     background-color: #eb65d9;
     border-radius: 3px;
     padding: 5px;
-    margin: 10px;
-    text-decoration: none;
+    margin: 40px 10px;
+    text-decoration: none; 
 }
 
     
@@ -506,6 +512,7 @@ input[type=email], select {
     row-gap: 30px;
     align-items: center;
     justify-content: center;
+    margin-bottom: 40px;
 }
 
 .diseñoDatos input{
