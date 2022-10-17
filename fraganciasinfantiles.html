@@ -1,124 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
             
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Estonia&family=Shalimar&family=Splash&family=Tapestry&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="./estilos.css">    
-    <title>ÉCLAT PARFUMERIE</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Estonia&family=Shalimar&family=Splash&family=Tapestry&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="./estilos.css">    
+        <link rel="shortcut icon" href="./proyectoImag/favicon.ico" type="image/x-icon">
+        <title>ÉCLAT PARFUMERIE</title>
     
-</head>
-<body>
-    <header id="idHeader">
-    </header>
+    </head>
+    <body>
+        <header id="idHeader">
+        </header>
 
-    <nav id="idNav">
-    </nav>
+        <nav id="idNav">
+        </nav>
 
-    <main>
-        <div class="contenedor">
-             <div class="tarjeta">
-                    <img src="./proyectoImag/perfNiña1.jpeg" alt="">
-                    <h2>Madelaine</h2>
-                    <p>Notas de Salida: Matices florales.
-                       Notas de Corazón: Azahar y rosas.
-                       Notas de Fondo: Lirios y tulipanes.</p>            <a target="_blank" href=></a>
-                       <br>
-                       <br>
-                       <br>
-                       <br>
-                    <a class="boton" href="">Comprar</a>
-        
+        <main>
+            <div id="appN" class="contenedor">
+                <div v-for="fragancia of fragN" class="tarjeta">
+                   <img :src="fragancia.imagen" alt="fragancia.nombre">
+                   <h2>{{fragancia.nombre}}</h2>
+                   <p class="detalle">{{fragancia.descripcion}}</p> 
+                   <p>Precio ${{fragancia.precio}}</p> 
+                   <a class="boton" href="">Comprar</a>
+                </div>
             </div>
-              
-            <div class="tarjeta">
-                <img src="./proyectoImag/perfNiña3.webp" alt="">
-                <h2>Lorelei</h2>
-                <p>Notas de Salida: Pomelo Rosado, Mandarina, Cereza, Durazno, Mora.
-                   Notas de Corazón: Geranio, Lila, Lavanda, Rosa.
-                   Notas de Fondo: Pepino, Almizcle, Vainilla.</p>            <a target="_blank" href=></a> 
-                   <br>
-                   <br>
-                <a class="boton" href="">Comprar</a>
-    
-            </div>
-            <div class="tarjeta">
-                <img src="./proyectoImag/perfNiña2.webp" alt="">
-                <h2>Pretty Smile</h2>
-                <p>Notas de Salida: Gardenias, rosas.
-                   Notas de Corazón: Margaritas y lirios.
-                   Notas de Fondo: Ámbar y durazno.</p>            <a target="_blank" href=></a>
-                   <br>
-                   <br>
-                   <br>
-                   <br>
-                <a class="boton" href="">Comprar</a>
-    
-            </div>
-            <div class="tarjeta">
-                <img src="./proyectoImag/perfNiña4.jpeg" alt="">
-                <h2>Conny</h2>
-                <p>Notas de Salida:  Rosas.
-                   Notas de Corazón: Lilas, frutas dulces.
-                   Notas de Fondo: Sándalo y tulipán.</p>            <a target="_blank" href=></a>
-                   <br>
-                   <br>
-                   <br>
-                   <br>
-                <a class="boton" href="">Comprar</a>
-    
-            </div>
-            <div class="tarjeta">
-                <img src="./proyectoImag/perfNiño1.webp" alt="">
-                <h2>Santi</h2>
-                <p>Notas de Salida: Coco y bamboo.
-                   Notas de Corazón: Jengibre y especias.
-                   Notas de Fondo: Sándalo, canela y ámbar</p>            <a target="_blank" href=></a>
-                   <br>
-                   <br>
-                <a class="boton" href="">Comprar</a>
-    
-            </div>
-            <div class="tarjeta">
-                <img src="./proyectoImag/perfNiño2.jpeg" alt="">
-                <h2>Vibez</h2>
-                <p>Notas deSalida: Cítricos, Ciruela, Damasco, Pera.
-                   Notas de Corazón: Calendula, Geranio, Fresias, Rosas.
-                   Notas de Fondo: Violeta, Cassis, Romero, Sándalo, Vainilla</p>            <a target="_blank" href=></a>
-                   <br>
-                <a class="boton" href="">Comprar</a>
-            </div>
-            <div class="tarjeta">
-                <img src="./proyectoImag/perfNiño3.jpeg" alt="">
-                <h2>Massimo</h2>
-                <p>Notas de Salida: Mandarina, Pimienta y Nuez Moscada.
-                   Notas de Corazón: Lavandín, Ylang y Albaricoque.
-                   Notas de Fondo: Ámbar y Durazno.</p>            <a target="_blank" href=></a>
-                   <br>
-                   <br>
-                <a class="boton" href="">Comprar</a>
-            </div>
-            <div class="tarjeta">
-                <img src="./proyectoImag/perfNiño4.jpeg" alt="">
-                <h2>Special little boy</h2>
-                <p>Notas de Salida: Maracuyá, Limón, Bergamota.
-                   Notas de Corazón: Pepino, Cedro, Vetiver.
-                   Notas de Fondo: Almizcle, Lilas.</p>            <a target="_blank" href=></a>
-                   <br>
-                   <br>
-                <a class="boton" href="">Comprar</a>
-            </div>
-        </div>
-    
-    </main>
+        </main>
 
-    <footer id="idFooter">
-    </footer>
-    <script src="./main.js"></script>
-</body>
+        <footer id="idFooter">
+        </footer>
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="./main.js"></script>
+    </body>
 </html>

@@ -9,129 +9,36 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Estonia&family=Shalimar&family=Splash&family=Tapestry&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-        <link rel="stylesheet" href="./estilos.css">
         <title>ÉCLAT PARFUMERIE</title>
-    
+        <link rel="stylesheet" href="./estilos.css">
+        <link rel="shortcut icon" href="./proyectoImag/favicon.ico" type="image/x-icon">
+        
     </head>
+    
     <body>
-
         <header id="idHeader">
         </header>
     
         <nav id="idNav">
         </nav>
 
-         <main>
-            <div class="contenedor">
-                 <div class="tarjeta">
-                        <img src="./proyectoImag/depositphotos_146215833-stock-photo-woman-hands-holding-bottle-of.jpg" alt="">
-                        <h2>Divinidad</h2>
-                        <p><b>Eau de parfum - 25%OFF</b></p>
-                        <p>Oferta disponible hasta agotarse su existencia. </p>            <a target="_blank" href=></a>
-                        <br>
-                        <a class="boton" href="">Comprar</a>
-            
-                </div>
-                    
-                <div class="tarjeta">
-                    <img src="./proyectoImag/depositphotos_359129836-stock-photo-purple-glass-perfume-bottles-violet.jpg" alt="">
-                    <h2>Sensorium</h2>
-                    <p><b>Eau de parfum - 40%OFF</b></p>
-                    <p>Oferta disponible hasta agotarse su existencia.</p>            <a target="_blank" href=></a>
-                    <br>
+        <main></main>
+            <div id="appP" class="contenedor">
+                <div v-for=" articulo of prom" class="tarjeta">
+                    <img :src="articulo.imagen" alt="articulo.nombre">
+                    <h2>{{articulo.nombre}}</h2>
+                    <p>{{articulo.descripcion}} - {{articulo.descuento}}</p> 
+                    <p>Precio ${{articulo.precio}}</p> 
+                    <p>Oferta disponible hasta agotarse su existencia.</p>
                     <a class="boton" href="">Comprar</a>
-        
                 </div>
-                <div class="tarjeta">
-                    <img src="./proyectoImag/perf hombre6.jpg" alt="">
-                    <h2>Hernan Praga N°6</h2>
-                    <p><b>Eau de cologne - 20%OFF</b></p>
-                    <p>Oferta disponible hasta agotarse su existencia.</p>            <a target="_blank" href=></a>
-                    <br>
-                    <a class="boton" href="">Comprar</a>
-        
-                </div>
-                <div class="tarjeta">
-                    <img src="./proyectoImag/perf hombre7.jpg" alt="">
-                    <h2>Volonté</h2>
-                    <p><b>Eau de cologne 10%OFF</b></p>
-                    <p>Oferta disponible hasta agotarse su existencia.</p>            <a target="_blank" href=></a>
-                    <br>
-                    <a class="boton" href="">Comprar</a>
-        
-                </div>
-                <div class="tarjeta">
-                    <img src="./proyectoImag/perf hombre8.jpg" alt="">
-                    <h2>Petit Enfant</h2>
-                    <p><b>Eau de cologne - 35%OFF</b></p>
-                    <p>Oferta disponible hasta agotarse su existencia.</p>            <a target="_blank" href=></a>
-                    <br>
-                    <br>
-                    <a class="boton" href="">Comprar</a>
-        
-                </div>
-                <div class="tarjeta">
-                    <img src="./proyectoImag/pexels-photo-2600761.webp" alt="">
-                    <h2>Selene Eyeshadow</h2>
-                    <p><b>Paleta de sombras - 15%OFF</b></p>
-                    <p>Oferta disponible hasta agotarse su existencia. </p>            <a target="_blank" href=></a>
-                    <br>
-                    <br>
-                    <a class="boton" href="">Comprar</a>
-        
-                </div>
-
-                <div class="tarjeta">
-                    <img src="./proyectoImag/pexels-photo-4938513.jpeg" alt="">
-                    <h2>Base en polvo + Mascara Moonlight</h2>
-                    <p><b>Dúo kit de maquillaje - 20%OFF</b></p>
-                    <p>Oferta disponible hasta agotarse su existencia. </p>            <a target="_blank" href=></a>
-                    <br>
-                    <a class="boton" href="">Comprar</a>
-        
-                </div>
-
-                <div class="tarjeta">
-                    <img src="./proyectoImag/pexels-photo-4416763.webp" alt="">
-                    <h2>Labial Passion Rouge</h2>
-                    <p><b>Labial en barra - 30%OFF</b></p>
-                    <p>Oferta disponible hasta agotarse su existencia. </p>            <a target="_blank" href=></a>
-                    <br>
-                    <br>
-                    <a class="boton" href="">Comprar</a>
-        
-                </div>
-
-                <div class="tarjeta">
-                    <img src="./proyectoImag/pexels-photo-2533266.webp" alt="">
-                    <h2>Rubor + Labial Tamara</h2>
-                    <p><b>Polvo rubor y barra de labial - 15%OFF</b></p>
-                    <p>Oferta disponible hasta agotarse su existencia. </p>            <a target="_blank" href=></a>
-                    <a class="boton" href="">Comprar</a>
-        
-                </div>
-
-                <div class="tarjeta">
-                    <img src="./proyectoImag/pexels-photo-3785147.webp" alt="">
-                    <h2>Henai Skin Care</h2>
-                    <p><b>Kit de skin care - 40%OFF</b></p>
-                    <p>Oferta disponible hasta agotarse su existencia. </p>            <a target="_blank" href=></a>
-                    <br>
-                    <a class="boton" href="">Comprar</a>
-        
-                </div>
-
-
-
             </div>
-        
-            </main>        
+        </main>        
    
-
-
-            <footer id="idFooter">
-            </footer>
-            <script src="./main.js"></script>
-</div>
-</body>
+        <footer id="idFooter">
+        </footer>
+            
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="./main.js"></script>
+    </body>
 </html>

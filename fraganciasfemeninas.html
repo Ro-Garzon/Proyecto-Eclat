@@ -10,6 +10,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Estonia&family=Shalimar&family=Splash&family=Tapestry&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
         <link rel="stylesheet" href="./estilos.css">
+        <link rel="shortcut icon" href="./proyectoImag/favicon.ico" type="image/x-icon">
         <title>ÉCLAT PARFUMERIE</title>
     
     </head>
@@ -21,58 +22,22 @@
         <nav id="idNav">
         </nav>
     
-
-     <main>
-        <div class="contenedor">
-             <div class="tarjeta">
-                    <img src="./proyectoImag/depositphotos_192130508-stock-photo-top-view-glass-bottles-perfumes.jpg" alt="">
-                    <h2>Sweet blossom</h2>
-                    <p>Su aroma floral transporta valores de libertad, inocencia y delicadez. Su salida es fresca y semi-chispeante, totalmente primaveral.</p>            <a target="_blank" href=></a>
+        <main>
+            <div id="appM" class="contenedor">
+                <div v-for="fragancia of fragM" class="tarjeta">
+                    <img :src="fragancia.imagen" alt="fragancia.nombre">
+                    <h2>{{fragancia.nombre}}</h2>
+                    <p class="detalle">{{fragancia.descripcion}}</p> 
+                    <p>Precio ${{fragancia.precio}}</p> 
                     <a class="boton" href="">Comprar</a>
-        
+                </div>
             </div>
-                
-            <div class="tarjeta">
-                <img src="./proyectoImag/depositphotos_225859050-stock-photo-top-view-perfumes-decorative-feathers.jpg" alt="">
-                <h2>Séduisante</h2>
-                <p>Con delicadas notas amaderadas, combinadas con la seducción del jazmin y el almizcle, le aportan a la mujer actual sobriedad y elegancia.</p>            <a target="_blank" href=></a>
-                <a class="boton" href="">Comprar</a>
-    
-            </div>
-            <div class="tarjeta">
-                <img src="./proyectoImag/depositphotos_194211488-stock-photo-top-view-bottles-fresh-perfume.jpg" alt="">
-                <h2>Lovely girl</h2>
-                <p>Encanto frutal de naranja dulce, con notas de salida silvestres y atrevidas que combinan la frescura del jengibre y la bergamota.</p>            <a target="_blank" href=></a>
-                <a class="boton" href="">Comprar</a>
-    
-            </div>
-            <div class="tarjeta">
-                <img src="./proyectoImag/depositphotos_359129764-stock-photo-high-angle-view-purple-perfume.jpg" alt="">
-                <h2>Enchantée</h2>
-                <p>El aroma del lirio y el dulzor del caramelo se fusionan para dar vida a este perfume con aires de juventud y sensibilidad</p>            <a target="_blank" href=></a>
-                <a class="boton" href="">Comprar</a>
-    
-            </div>
-            <div class="tarjeta">
-                <img src="./proyectoImag/depositphotos_10890272-stock-photo-perfume-bottle-and-pink-rose.jpg" alt="">
-                <h2>Delirio Rose</h2>
-                <p>Su salida floral y aligerada destaca el frescor de la primavera, es el perfume ideal para las amantes de esta hermosa estación</p>            <a target="_blank" href=></a>
-                <a class="boton" href="">Comprar</a>
-    
-            </div>
-            <div class="tarjeta">
-                <img src="./proyectoImag/depositphotos_69685593-stock-photo-perfumes-in-bottles-on-table.jpg" alt="">
-                <h2>La La Land</h2>
-                <p>La lavanda, el coco y el almizcle fueron integrados cuidadosamente para crear este aroma único e incomparable, su salida refrescante y seductora te sorprenderá </p>            <a target="_blank" href=></a>
-                <a class="boton" href="">Comprar</a>
-    
-            </div>
-        </div>
-    
         </main>        
    
         <footer id="idFooter">
         </footer>
+
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <script src="./main.js"></script>
-</body>
+    </body>
 </html>

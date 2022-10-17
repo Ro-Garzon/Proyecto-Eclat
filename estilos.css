@@ -484,7 +484,7 @@ input[type=email], select {
 
 .detalle{
     padding: 10px;
-    height: 90px;
+    height: 100px;
 }
     
 .tarjeta>img{
@@ -497,7 +497,7 @@ input[type=email], select {
     background-color: #eb65d9;
     border-radius: 3px;
     padding: 5px;
-    margin: 40px 10px;
+    margin: 0px 10px;
     text-decoration: none; 
 }
 

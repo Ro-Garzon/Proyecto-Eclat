@@ -1,84 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
             
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Estonia&family=Shalimar&family=Splash&family=Tapestry&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="./estilos.css">      
-    <title>ÉCLAT PARFUMERIE</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Estonia&family=Shalimar&family=Splash&family=Tapestry&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="./estilos.css">      
+        <title>ÉCLAT PARFUMERIE</title>
+        <link rel="shortcut icon" href="./proyectoImag/favicon.ico" type="image/x-icon">
+    </head>
     
-</head>
-<body>
-    <header id="idHeader">
-    </header>
+    <body>
+        <header id="idHeader">
+        </header>
 
-    <nav id="idNav">
-    </nav>
-
+        <nav id="idNav">
+        </nav>
 
 
-<main>
-    <div class="contenedor">
-         <div class="tarjeta">
-                <img src="./proyectoImag/perfHombre10.jpg" alt="">
-                <h2>Cinnamon Men</h2>
-                <p class="detalle">Con un sutil toque de canela que aporta masculinidad y confianza, ideal para hombres arriesgados</p>            
-                <p>Precio $ </p>
-                <a class="boton" href="">Comprar</a>
-    
-        </div>
+        <main>
+            <div id="appH" class="contenedor">
+                <div v-for="fragancia of fragH" class="tarjeta">
+                    <img :src="fragancia.imagen" alt="fragancia.nombre">
+                    <h2>{{fragancia.nombre}}</h2>
+                    <p class="detalle">{{fragancia.descripcion}}</p>            
+                    <p>Precio ${{fragancia.precio}}</p>
+                    <a class="boton" href="">Comprar</a>
+                </div>
+            </div>
+        </main>
 
-        <div class="tarjeta">
-            <img src="./proyectoImag/perfHombre3.jpg" alt="">
-            <h2>Temptation</h2>
-            <p class="detalle">Con un audaz acorde amaderado que inspira plenitud y serenidad al hombre moderno.</p>            
-            <p>Precio $ </p>
-            <a class="boton" href="">Comprar</a>
-
-        </div>
-        <div class="tarjeta">
-            <img src="./proyectoImag/perfHombre2.jpg" alt="">
-            <h2>Sunset Cool Water</h2>
-            <p class="detalle">Una fragancia fresca y masculina para un atardecer de ensueño</p>            <a target="_blank" href=></a>
-            <p>Precio $ </p>
-            <a class="boton" href="">Comprar</a>
-
-        </div>
-        <div class="tarjeta">
-            <img src="./proyectoImag/perf hombre1.jpg" alt="">
-            <h2>Michelangelo</h2>
-            <p class="detalle">Ideal para hombres extrovertidos. Notas de salida: salvia, geranio y pepino</p>            <a target="_blank" href=></a>
-            <p>Precio $ </p>
-            <a class="boton" href="">Comprar</a>
-
-        </div>
-        <div class="tarjeta">
-            <img src="./proyectoImag/perf hombre5.jpg" alt="">
-            <h2>Wonderwall</h2>
-            <p class="detalle">Con deliciosas notas de corazón provenientes del almizcle, el cilantro y la alcaravea, combinadas con notas de fondo del tabaco y la bergamota </p>            <a target="_blank" href=></a>
-            <p>Precio $ </p>
-            <a class="boton" href="">Comprar</a>
-
-        </div>
-        <div class="tarjeta">
-            <img src="./proyectoImag/perf hombre9.jpg" alt="">
-            <h2>Rennaisance</h2>
-            <p class="detalle">Una fragancia creada para conquistar e inspirar al hombre moderno. Sus notas de fondo se componen de almizcle, musgo de roble y cedro</p>            <a target="_blank" href=></a>
-            <p>Precio $ </p>
-            <a class="boton" href="">Comprar</a>
-
-        </div>
-    </div>
-
-    </main>
-
-    <footer id="idFooter">
-    </footer>
-    <script src="./main.js"></script>
-</body>
+        <footer id="idFooter">
+        </footer>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="./main.js"></script>
+    </body>
 </html>

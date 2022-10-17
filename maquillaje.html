@@ -1,75 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Estonia&family=Shalimar&family=Splash&family=Tapestry&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="./estilos.css">
-    <title>ÉCLAT PARFUMERIE</title>
-    
-</head>
-<body>
-    <header id="idHeader">
-    </header>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Estonia&family=Shalimar&family=Splash&family=Tapestry&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="./estilos.css">
+        <link rel="shortcut icon" href="./proyectoImag/favicon.ico" type="image/x-icon">
+        <title>ÉCLAT PARFUMERIE</title>
+    </head>
 
-    <nav id="idNav">
-    </nav>
+    <body>
+        <header id="idHeader">
+        </header>
 
-<main>
-<div class="contenedor">
-     <div class="tarjeta">
-            <img src="./proyectoImag/labial liquido.jpg" alt="Labial Liquido">
-            <h2>Labial liquido</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestias voluptatibus cumque, recusandae sed libero explicabo dolor obcaecati eius possimus debitis exercitationem aspernatur architecto ab natus ducimus sapiente esse commodi!</p>            <a target="_blank" href=></a>
-            <a class="boton" href="">Comprar</a>
+        <nav id="idNav">
+        </nav>
 
-    </div>
-      
-    <div class="tarjeta">
-        <img src="./proyectoImag/labialesbarra.jpg" alt="labialesbarra">
-        <h2>Labiales en Barra</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestias voluptatibus cumque, recusandae sed libero explicabo dolor obcaecati eius possimus debitis exercitationem aspernatur architecto ab natus ducimus sapiente esse commodi!</p>            <a target="_blank" href=></a>
-        <a class="boton" href="">Comprar</a>
+        <main>
+            <div id="appMaq" class="contenedor">
+                <div v-for=" articulo of maq" class="tarjeta">
+                    <img :src="articulo.imagen" alt="articulo.nombre">
+                    <h2>{{articulo.nombre}}</h2>
+                    <p class="detalle">{{articulo.descripcion}}</p> 
+                    <p>Precio ${{articulo.precio}}</p> 
+                    <a class="boton" href="">Comprar</a>
+                </div>
+            </div>
+        </main>
 
-    </div>
-    <div class="tarjeta">
-        <img src="./proyectoImag/labialbarra.jpg" alt="labialbarra">
-        <h2>Labial en Barra</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestias voluptatibus cumque, recusandae sed libero explicabo dolor obcaecati eius possimus debitis exercitationem aspernatur architecto ab natus ducimus sapiente esse commodi!</p>            <a target="_blank" href=></a>
-        <a class="boton" href="">Comprar</a>
+        <footer id="idFooter">
+        </footer>
 
-    </div>
-    <div class="tarjeta">
-        <img src="./proyectoImag/paletasombras.jpg" alt="Paleta de sombras">
-        <h2>Paleta de sombras</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestias voluptatibus cumque, recusandae sed libero explicabo dolor obcaecati eius possimus debitis exercitationem aspernatur architecto ab natus ducimus sapiente esse commodi!</p>            <a target="_blank" href=></a>
-        <a class="boton" href="">Comprar</a>
-
-    </div>
-    <div class="tarjeta">
-        <img src="./proyectoImag/brochas.jpg" alt="brochas">
-        <h2>brochas</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestias voluptatibus cumque, recusandae sed libero explicabo dolor obcaecati eius possimus debitis exercitationem aspernatur architecto ab natus ducimus sapiente esse commodi!</p>            <a target="_blank" href=></a>
-        <a class="boton" href="">Comprar</a>
-
-    </div>
-    <div class="tarjeta">
-        <img src="./proyectoImag/esponjasbase.jpg" alt="Esponjas base">
-        <h2>Esponjas para base</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestias voluptatibus cumque, recusandae sed libero explicabo dolor obcaecati eius possimus debitis exercitationem aspernatur architecto ab natus ducimus sapiente esse commodi!</p>            <a target="_blank" href=></a>
-        <a class="boton" href="">Comprar</a>
-    </div>
-</div>
-
-</main>
-
-<footer id="idFooter">
-</footer>
-<script src="./main.js"></script>
-</body>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="./main.js"></script>
+    </body>
 </html>

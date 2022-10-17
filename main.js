@@ -1,4 +1,4 @@
-/*Encabezado para las páginas*/
+//Encabezado para las páginas
 let cadH=`
 <a id="logo" href="./index.html"><img src="./proyectoImag/loto(3).png" alt="ÉCLAT"></a>   
 <h1>ÉCLAT Parfumerie</h1>
@@ -6,7 +6,7 @@ let cadH=`
 document.getElementById("idHeader").innerHTML=cadH;
 
 
-/*Menú para las páginas*/
+//Menú para las páginas
 let cadN=`
 <input type="checkbox" id="check">
 <label for="check" class="menuboton">
@@ -31,7 +31,7 @@ let cadN=`
 document.getElementById("idNav").innerHTML=cadN;
 
 
-/*Footer para las páginas*/
+//Footer para las páginas
 
 let cadF=`
 <a class="social" target="_black" href="https://www.facebook.com">
@@ -52,13 +52,127 @@ let cadF=`
 document.getElementById("idFooter").innerHTML=cadF
 
 
-/*consumir json para tarjetas de productos*/
+
+//consumir json para tarjetas de productos
+
+const { createApp } = Vue
+
+const appM=createApp({//fragancias de damas
+  data() {
+    return {
+      fragM: []
+    }
+  },
+  methods: {
+    fetchData(url) {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => { 
+                this.fragM=data.damas  
+            })
+
+    }
+  },
+  created(){
+  this.fetchData("https://ro-garzon.github.io/productos.json") 
+  }
+}).mount('#appM')
 
 
 
+const appH=createApp({//fragancias de caballeros
+  data() {
+    return {
+      fragH: []
+    }
+  },
+  methods: {
+    fetchData(url) {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => { 
+                this.fragH=data.caballeros  
+                console.log(this.fragH)
+            })
+
+    }
+  },
+  created(){
+  this.fetchData("https://ro-garzon.github.io/productos.json") 
+  }
+}).mount('#appH')
 
 
-/*Login*/
+
+const appN=createApp({//fragancias de niños
+  data() {
+    return {
+      fragN: []
+    }
+  },
+  methods: {
+    fetchData(url) {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => { 
+                this.fragN=data.niños
+            })
+
+    }
+  },
+  created(){
+  this.fetchData("https://ro-garzon.github.io/productos.json") 
+  }
+}).mount('#appN')
+
+
+
+const appMaq=createApp({//maquillaje
+  data() {
+    return {
+      maq: []
+    }
+  },
+  methods: {
+    fetchData(url) {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => { 
+                this.maq=data.maquillaje
+            })
+
+    }
+  },
+  created(){
+  this.fetchData("https://ro-garzon.github.io/productos.json") 
+  }
+}).mount('#appMaq')
+
+
+
+const appP=createApp({//promociones
+  data() {
+    return {
+      prom: []
+    }
+  },
+  methods: {
+    fetchData(url) {
+        fetch(url)
+            .then(response => response.json())
+            .then(data => { 
+                this.prom=data.promociones
+            })
+
+    }
+  },
+  created(){
+  this.fetchData("https://ro-garzon.github.io/productos.json") 
+  }
+}).mount('#appP')
+
+
+//Login
 
 const usuario = document.getElementById('usuario');
 const contraseña = document.getElementById('contraseña');
