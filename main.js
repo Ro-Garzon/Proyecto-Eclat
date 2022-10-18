@@ -74,7 +74,7 @@ const appM=createApp({//fragancias de damas
     }
   },
   created(){
-  this.fetchData("https://ro-garzon.github.io/productos.json") 
+  this.fetchData("https://ro-garzon.github.io/json-proyecto-eclat/productos.json") 
   }
 }).mount('#appM')
 
@@ -98,7 +98,7 @@ const appH=createApp({//fragancias de caballeros
     }
   },
   created(){
-  this.fetchData("https://ro-garzon.github.io/productos.json") 
+  this.fetchData("https://ro-garzon.github.io/json-proyecto-eclat/productos.json") 
   }
 }).mount('#appH')
 
@@ -121,7 +121,7 @@ const appN=createApp({//fragancias de niños
     }
   },
   created(){
-  this.fetchData("https://ro-garzon.github.io/productos.json") 
+  this.fetchData("https://ro-garzon.github.io/json-proyecto-eclat/productos.json") 
   }
 }).mount('#appN')
 
@@ -144,7 +144,7 @@ const appMaq=createApp({//maquillaje
     }
   },
   created(){
-  this.fetchData("https://ro-garzon.github.io/productos.json") 
+  this.fetchData("https://ro-garzon.github.io/json-proyecto-eclat/productos.json") 
   }
 }).mount('#appMaq')
 
@@ -167,7 +167,7 @@ const appP=createApp({//promociones
     }
   },
   created(){
-  this.fetchData("https://ro-garzon.github.io/productos.json") 
+  this.fetchData("https://ro-garzon.github.io/json-proyecto-eclat/productos.json") 
   }
 }).mount('#appP')
 
