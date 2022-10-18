@@ -397,23 +397,46 @@ footer{
 
 /*Registro*/
 .registro {
-    margin: 20px;
+  background-color: rosybrown;
+  margin: 20px auto;
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
 }
 
 input[type=text], select , textarea{
-    width: 30%;
+  /*width: 30%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
+    box-sizing: border-box; */
+    width: 90%;
+    height: 30px;
+    margin: 0.5rem;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     box-sizing: border-box;
+
+
 }
 
 input[type=tel], select {
-    width: 30%;
+   /* width: 30%;
     padding: 12px 20px;
     margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;*/
+    width: 90%;
+    height: 30px;
+    margin: 0.5rem;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -421,9 +444,16 @@ input[type=tel], select {
 }
 
 input[type=number], select {
-    width: 30%;
+   /* width: 30%;
     padding: 12px 20px;
     margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;*/
+    width: 90%;
+    height: 30px;
+    margin: 0.5rem;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -431,9 +461,16 @@ input[type=number], select {
 }
       
 input[type=email], select {
-    width: 30%;
+   /* width: 30%;
     padding: 12px 20px;
     margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;*/
+    width: 90%;
+    height: 30px;
+    margin: 0.5rem;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
