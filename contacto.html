@@ -22,37 +22,40 @@
     </nav>
 
     <main>
-    <div class="registro">
-        <div class="registro"> <br>
-        <h2>CONTACTENOS</h2><br>
-        <p>Envianos un mensaje a través de nuestro formulario de contacto o bien utilizando nuestro correo</p>
-        <a href="mailto:ventasonline@eclatparfumerie.com.ar">ventasonline@eclatparfumerie.com.ar</a> <br><br><br>
+        <div class="registro">
+            <div class="contacto">
+                <h3>CONTACTENOS</h3>
+                <p>Envianos un mensaje a través de nuestro formulario de contacto o bien utilizando nuestro correo:</p>
+                <a href="mailto:eclatparfumerie@gmail.com">eclatparfumerie@gmail.com</a>
+            </div>
+            
+            
+            <form action="https://formsubmit.co/eclatparfumerie@gmail.com" id="formulario" name= "formulario" class="form" method="post">
+                <h3>REGISTRO DEL CLIENTE</h3>
+                <label for="Nombre">Nombre:</label>
+                <input type="text" name="Nombre" id="Nombre" placeholder="Nombre...">
+                <label for="Email">Email:</label>
+                <input type="email" name="Email" id="Email" placeholder="Email...">
+                <label for="Telefono">Teléfono:</label>
+                <input type="tel" name="Telefono" id="Telefono" >
+                <label for="ID del pedido">ID del pedido:</label>
+                <input type="number" name="IDdelpedido" id="IDdelpedido" placeholder="Ej:1170095339-01">
+                <label for="Mensaje">Mensaje:</label>
+                <textarea id="Mensaje" name="Mensaje" placeholder="Escribe tu consulta.."></textarea>
+                <input type="submit" value="Enviar" id="botonRegistro">
     
-        <h2>REGISTRO DEL CLIENTE</h2><br>
-        <form action="" name= "formulario" method="get" target="_blank">
-            <label for="Nombre">Nombre:</label>
-            <input type="text" name="Nombre" id="Nombre" placeholder="Nombre..."><br><br>
-            <label for="Email">Email:</label>
-            <input type="email" name="Email" id="Email" placeholder="Email..."><br><br>
-            <label for="Telefono">Teléfono:</label>
-            <input type="tel" name="Telefono" id="Telefono" placeholder="Teléfono"><br><br>
-            <label for="ID del pedido">ID del pedido:</label>
-            <input type="number" name="ID del pedido" id="ID del pedido" placeholder="Ej:1170095339-01"><br><br><br>
-            <label for="Mensaje">Mensaje:</label> <br>
-            <textarea id="Mensaje" name="Mensaje" placeholder="Escribe algo.." style="height: 200px; width: 400px;
-            "></textarea><br><br>
-
-            <!--<label for="Mensaje">Mensaje:</label>
-            <input size= 100 type="text" name="Mensaje" id="Mensaje" placeholder="Mensaje"> <br><br>-->
-            <input class="botonRegistro" type="submit" value="Enviar">
-        </form>
-    </div>
-    
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/contacto.html"> 
+                <input type="hidden" name="_captcha" value="false">
+                
+            </form>
+        </div>
     </main>
 
 
     <footer id="idFooter">
     </footer>
+
     <script src="./main.js"></script>
+    <script src="./validarform.js" ></script>
 </body>
 </html>

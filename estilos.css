@@ -120,7 +120,7 @@ main {
     max-width: 100%;
 }
 
-/*carrusel*/
+/*carrusel y su animación*/
 .slider{
     width: 100%;
     overflow: hidden;
@@ -268,7 +268,7 @@ footer{
     }
     
     nav ul{
-        position: fixed;
+        position: absolute;
         width: 100%;
         height: 100vh;
         background-color: #753460;
@@ -285,13 +285,13 @@ footer{
         margin-left: 30px;
     }
 
-    .submenu{
+    .menu li:hover .submenu{
         position: inherit;
         z-index: 10px;
         top:0;
         left: 70px;
         padding:0px;
-        height: inherit;
+        height: 100%;
         width: 30%;
         }
     
@@ -396,99 +396,68 @@ footer{
 }
 
 
-/*Registro*/
-.registro {
-  background-color: rosybrown;
-  margin: 20px auto;
-  width: 100%;
-  max-width: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content:center;
-  align-items: center;
-}
-
-input[type=text], select , textarea{
-  /*width: 30%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; */
-    width: 90%;
-    height: 30px;
-    margin: 0.5rem;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
 
 
+/*Animación de carga de las páginas con tarjetas*/
+.fondoCargando{
+    background-color:#fcf8f8;
+    position: absolute;
+    z-index: 100px;
+    top: 160px;
+    width: 100%;
+    height: 600px;
 }
 
-input[type=tel], select {
-   /* width: 30%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;*/
-    width: 90%;
-    height: 30px;
-    margin: 0.5rem;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+.contenedorCargando{
+    position:relative;
+    width: 60px;
+    height: 60px;
+    top: 40%;
+    left:50%
 }
 
-input[type=number], select {
-   /* width: 30%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;*/
-    width: 90%;
-    height: 30px;
-    margin: 0.5rem;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+.contenedorCargando .cargando{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: solid 4px transparent;
+    border-top-color:#eb65d9;
+    border-left-color:#eb65d9;
+    border-radius: 50%;
+    animation: cargando 1.5s linear infinite;
 }
-      
-input[type=email], select {
-   /* width: 30%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;*/
-    width: 90%;
-    height: 30px;
-    margin: 0.5rem;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+
+.contenedorCargando .cargando2{
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    border: solid 4px transparent;
+    border-top-color:#c9c8c8;
+    border-left-color:#c9c8c8;
+    border-radius: 50%;
+    animation: cargando2 1.5s linear infinite;
 }
-      
-.botonRegistro {
-    width: 20%;
-    background-color:#753460;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+
+@keyframes cargando{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg); 
+    }
 }
-  
+
+@keyframes cargando2{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+
+
 /*Tarjetas de productos*/
 .contenedor{
     display: flex;
@@ -539,9 +508,70 @@ input[type=email], select {
     text-decoration: none; 
 }
 
-    
+
+ /*Página de Contacto*/
+.registro{
+    background-color: #bc8f8f;
+    border-radius: 4px;
+    max-width: 600px;
+    margin: 40px auto;
+    width: 90%;
+    padding: 20px 40px;
+}
+
+.contacto{
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+
+.contacto a{
+    color: #000;
+    font-weight: bold;
+}
+  
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    row-gap: 20px;
+    padding-top: 20px;
+}
+.form input, .form select, .form textarea{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+.form textarea{
+    height: 140px;
+}
+        
+#botonRegistro{
+    width: 20%;
+    background-color:#753460;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 80px;
+}
+     
 
 /*Inicio de sesión*/
+.fondosesion{
+    background-color: #bc8f8f;
+    border-radius: 4px;
+    max-width: 600px;
+    margin: 40px auto;
+    width: 90%;
+    padding: 20px 40px;
+}
 
 
 .sesion{
@@ -550,56 +580,56 @@ input[type=email], select {
     row-gap: 30px;
     align-items: center;
     justify-content: center;
-    margin-bottom: 40px;
-    background-color: rosybrown;
-    margin-left: 30%;
-    margin-right: 30%;
-    margin-bottom: 2%;
-    margin-top: 2%;
-    
+    margin-bottom: 40px;        
+}
+
+.sesion .title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+.sesion a{
+    color: #000;
 }
 
 .diseñoDatos input{
-    width: 90%;
-}
-
-form .title{
-    font-size: 20px;
-    font-weight: 800;
-    margin-top: 60px;
+    height: 40px;
+    width: 250px;
 }
 
 .botonSesion{
     width: 20%;
     background-color:#753460;
     color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+    padding: 10px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    min-width: 80px;
 }
 
 /*Página de sucursales*/
 
-.container_sucursales1{
-    color: white;
-    text-decoration: none;
-    padding-left: 2%;
-    
+.sucursales{
+    color: rgb(19, 17, 17);
+    background-color: #bc8f8f;
+    border-radius: 4px;
+    width: 90%;
+    height: 90%;
+    margin: 30px auto
 }
 
-.container_descripcion{
-    background-color: #753460;
-    color: white;
-    padding-left: 2%;
-    padding-bottom: 2%;
+.sucursales h2{
+    padding: 20px 0% 2% 6%;
+}
+
+.sucursales p{
+    padding: 0 0 0 4%;
 }
 
 .container_map{
     width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    position: relative;
+    height: 80%;
+    padding: 2% 4%;
 }
