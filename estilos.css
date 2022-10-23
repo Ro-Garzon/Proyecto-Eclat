@@ -235,14 +235,18 @@ footer{
     width: 100%;
     padding: 20px;
 }
-
+#datoempresa p{
+    margin: 20px;
+    font-size: 16px;
+}
 .social img{
     width: 25px;
-    margin: 10px 20px 20px;
+    margin: 30px 20px 30px;
 }
 
-#atribucion a{
+footer a{
     color:#dbd8d8
+    
 }
 
 
@@ -285,7 +289,7 @@ footer{
         margin-left: 30px;
     }
 
-    .menu li:hover .submenu{
+    .submenu{
         position: inherit;
         z-index: 10px;
         top:0;
