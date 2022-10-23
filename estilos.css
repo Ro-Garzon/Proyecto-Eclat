@@ -291,14 +291,18 @@ footer a{
     }
 
     .submenu{
-        position: inherit;
+        position: relative;
         z-index: 10px;
         top:0;
         left: 70px;
         padding:0px;
         height: inherit;
-        width: 30%;
+        width: 40px;
         }
+
+    .menu li:hover .submenu{
+        width: 50%;
+    }
     
     #check:checked ~ ul{
     right: 0;
