@@ -32,5 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
       return;
     }
     this.submit();
-    alert('El mensaje ha sido enviado');
   }
+    
+
+  
