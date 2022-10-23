@@ -55,3 +55,24 @@ let cadF=`
 <div id="atribucion"> Iconos diseñados por <a target="_blank" href="https://www.freepik.com" title="Freepik"> Freepik </a> from <a target="_blank" href="https://www.flaticon.es/" title="Flaticon">www.flaticon.es</a></div>
 `
 document.getElementById("idFooter").innerHTML=cadF
+
+
+
+
+
+
+//Login
+
+const usuario = document.getElementById('usuario');
+const contraseña = document.getElementById('contraseña');
+const submit = document.getElementById('submit');
+
+submit.addEventListener('click', (e) => {
+    e.preventDefault()
+    const data = {
+        usuario: usuario.value,
+        contraseña: contraseña.value
+    }
+
+    console.log(data)
+})
